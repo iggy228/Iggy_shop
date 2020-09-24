@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyEcommerce</string>
+    <string name="available_btn">Its available</string>
 </resources>

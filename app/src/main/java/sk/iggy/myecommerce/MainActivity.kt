@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         val products = ArrayList<Product>()
 
         for (i in 0 until 100) {
-            products.add(Product("Apple", "https://via.placeholder.com/200x200/0000cc", 0.99))
+            products.add(Product("Shirt #${i+1}", "https://via.placeholder.com/200x200/0000cc", 0.99))
         }
 
         recycler_view.apply {
