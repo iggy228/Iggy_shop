@@ -1,5 +1,6 @@
 package sk.iggy.myecommerce
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,7 +20,13 @@ class ProductsAdapter(private val products: ArrayList<Product>) : RecyclerView.A
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.product_row, parent, false)
-        return ViewHolder(view)
+        val holder = ViewHolder(view)
+        view.setOnClickListener {
+            val intent = Intent(parent.context, ProductDetails::class.java)
+            intent.putExtra("name", products[holder.adapterPosition].title)
+            parent.context.startActivity(intent)
+        }
+        return holder
     }
 
     override fun onBindViewHolder(holder: ProductsAdapter.ViewHolder, position: Int) {
