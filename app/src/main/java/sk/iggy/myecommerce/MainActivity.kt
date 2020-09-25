@@ -3,8 +3,7 @@ package sk.iggy.myecommerce
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.main_context.*
 import sk.iggy.myecommerce.model.Product
 
 class MainActivity : AppCompatActivity() {

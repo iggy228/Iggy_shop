@@ -1,8 +1,6 @@
 package sk.iggy.myecommerce
 
-import android.content.DialogInterface
 import android.os.Bundle
-import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.product_details.*
@@ -18,9 +16,7 @@ class ProductDetails : AppCompatActivity() {
 
         product_availability.setOnClickListener {
             AlertDialog.Builder(this).setMessage("This $title is out of stock!")
-                .setPositiveButton("OK") {
-                        p0, p1 ->
-                }
+                .setPositiveButton("OK") { _, _ -> }
                 .create().show()
         }
     }

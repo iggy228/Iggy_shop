@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/drawer_shirts"
+        android:title="Shirts"
+        android:orderInCategory="1"
+        android:icon="@drawable/ic_shirt"
+        />
+    <item android:id="@+id/drawer_trousers"
+        android:title="Trousers"
+        android:orderInCategory="2"
+        android:icon="@drawable/ic_trousers"
+        />
+    <item android:id="@+id/drawer_underwear"
+        android:title="Underwear"
+        android:orderInCategory="3"
+        android:icon="@drawable/ic_underwear"
+        />
+    <item android:id="@+id/drawer_settings"
+        android:title="Settings"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_baseline_settings_24"
+        />
+</menu>
