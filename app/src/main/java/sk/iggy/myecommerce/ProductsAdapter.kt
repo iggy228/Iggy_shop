@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import sk.iggy.myecommerce.model.Product
 
-class ProductsAdapter(private val products: ArrayList<Product>) : RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
+class ProductsAdapter(private val products: List<Product>) : RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val image: ImageView = itemView.findViewById(R.id.photo)
@@ -24,6 +24,8 @@ class ProductsAdapter(private val products: ArrayList<Product>) : RecyclerView.A
         view.setOnClickListener {
             val intent = Intent(parent.context, ProductDetails::class.java)
             intent.putExtra("name", products[holder.adapterPosition].title)
+            intent.putExtra("photoUrl", products[holder.adapterPosition].photoUrl)
+            intent.putExtra("price", products[holder.adapterPosition].price.toString())
             parent.context.startActivity(intent)
         }
         return holder
