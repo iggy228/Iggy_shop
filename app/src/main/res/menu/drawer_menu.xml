@@ -1,23 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/drawer_shirts"
-        android:title="Shirts"
-        android:orderInCategory="1"
-        android:icon="@drawable/ic_shirt"
-        />
-    <item android:id="@+id/drawer_trousers"
-        android:title="Trousers"
-        android:orderInCategory="2"
-        android:icon="@drawable/ic_trousers"
-        />
-    <item android:id="@+id/drawer_underwear"
-        android:title="Underwear"
-        android:orderInCategory="3"
-        android:icon="@drawable/ic_underwear"
-        />
-    <item android:id="@+id/drawer_settings"
-        android:title="Settings"
-        android:orderInCategory="100"
-        android:icon="@drawable/ic_baseline_settings_24"
-        />
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/drawer_home"
+            android:title="@string/home"
+            android:orderInCategory="1"
+            android:icon="@drawable/ic_baseline_home_24"
+            app:showAsAction="never"
+            />
+        <item android:id="@+id/drawer_shirts"
+            android:title="@string/shirts"
+            android:orderInCategory="1"
+            android:icon="@drawable/ic_shirt"
+            app:showAsAction="never"
+            />
+        <item android:id="@+id/drawer_trousers"
+            android:title="@string/trousers"
+            android:orderInCategory="1"
+            android:icon="@drawable/ic_trousers"
+            app:showAsAction="never"
+            />
+        <item android:id="@+id/drawer_underwear"
+            android:title="@string/underwear"
+            android:orderInCategory="1"
+            android:icon="@drawable/ic_underwear"
+            app:showAsAction="never"
+            />
+        <item android:id="@+id/drawer_settings"
+            android:title="@string/settings"
+            android:orderInCategory="100"
+            android:icon="@drawable/ic_baseline_settings_24"
+            app:showAsAction="never"
+            />
+    </group>
 </menu>

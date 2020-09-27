@@ -12,8 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity"
-            android:label="Iggy Shop"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            android:label="Iggy Shop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
