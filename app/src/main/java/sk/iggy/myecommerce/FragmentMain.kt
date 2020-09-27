@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.gson.Gson
+import kotlinx.android.synthetic.main.fragment_main.*
 import kotlinx.android.synthetic.main.fragment_main.view.*
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
@@ -24,12 +25,10 @@ class FragmentMain : Fragment() {
                 root.recycler_view.apply {
                     layoutManager = GridLayoutManager(activity, 2)
                     adapter = ProductsAdapter(products)
+                    root.progressBar.visibility = View.GONE
                 }
             }
         }
-
-
-
         return root
     }
 }
