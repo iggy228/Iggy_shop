@@ -30,7 +30,7 @@ class ProductsAdapter(private val products: List<Product>) : RecyclerView.Adapte
         }
         return holder
     }
-
+    // For setting values
     override fun onBindViewHolder(holder: ProductsAdapter.ViewHolder, position: Int) {
         val product = products[position]
         holder.title.text = product.title
@@ -39,5 +39,4 @@ class ProductsAdapter(private val products: List<Product>) : RecyclerView.Adapte
     }
 
     override fun getItemCount() = products.size
-
 }
