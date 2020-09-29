@@ -16,8 +16,7 @@ class ProductDetails : AppCompatActivity() {
         product_title.text = title
 
         Picasso.get().load(intent.getStringExtra("photoUrl")).into(product_image)
-
-        val price = "${intent.getStringExtra("price")}$"
+        val price = "${intent.getDoubleExtra("price", 0.0)}$"
         product_price.text = price
 
         product_availability.setOnClickListener {
