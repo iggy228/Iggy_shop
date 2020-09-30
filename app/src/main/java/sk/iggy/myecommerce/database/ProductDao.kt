@@ -13,8 +13,4 @@ interface ProductDao {
 
     @Insert
     fun insertAll(vararg products: ProductFromDatabase)
-
-    @Delete
-    fun delete(product: Product)
-
 }

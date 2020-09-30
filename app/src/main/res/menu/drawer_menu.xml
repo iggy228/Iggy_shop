@@ -2,12 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <group android:checkableBehavior="single">
-        <item android:id="@+id/drawer_home"
-            android:title="@string/home"
-            android:orderInCategory="1"
+        <item
+            android:id="@+id/drawer_home"
+            android:enabled="true"
             android:icon="@drawable/ic_baseline_home_24"
-            app:showAsAction="never"
-            />
+            android:orderInCategory="1"
+            android:title="@string/home"
+            app:showAsAction="never" />
         <item android:id="@+id/drawer_shirts"
             android:title="@string/shirts"
             android:orderInCategory="1"
@@ -28,9 +29,15 @@
             />
         <item android:id="@+id/drawer_settings"
             android:title="@string/settings"
-            android:orderInCategory="100"
+            android:orderInCategory="99"
             android:icon="@drawable/ic_baseline_settings_24"
             app:showAsAction="never"
             />
+        <item
+            android:id="@+id/drawer_admin"
+            android:icon="@drawable/ic_baseline_person_24"
+            android:orderInCategory="100"
+            android:title="@string/admin"
+            app:showAsAction="never" />
     </group>
 </menu>

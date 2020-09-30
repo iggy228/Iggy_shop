@@ -17,18 +17,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        doAsync {
-            val db = Room.databaseBuilder(applicationContext, AppDatabase::class.java,
-                "product_db").build()
-
-            db.productDao().insertAll(ProductFromDatabase(null, "Blue Socks", 0.99))
-
-            val data = db.productDao().getAll().toString()
-            uiThread {
-                Log.d("iggy", data)
-            }
-        }
-
         supportFragmentManager.beginTransaction().replace(R.id.frame_layout, FragmentMain()).commit()
 
         nav_view.setNavigationItemSelectedListener {
@@ -46,6 +34,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.drawer_underwear -> Log.d("iggy", "pressed underwear")
                 R.id.drawer_settings -> Log.d("iggy", "pressed setting")
+                R.id.drawer_admin -> supportFragmentManager.beginTransaction().replace(R.id.frame_layout, FragmentAdmin()).commit()
             }
             true
         }
