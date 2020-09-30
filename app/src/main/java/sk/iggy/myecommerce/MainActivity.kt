@@ -5,12 +5,29 @@ import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
+import androidx.room.Room
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.doAsync
+import org.jetbrains.anko.uiThread
+import sk.iggy.myecommerce.database.AppDatabase
+import sk.iggy.myecommerce.database.ProductFromDatabase
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        doAsync {
+            val db = Room.databaseBuilder(applicationContext, AppDatabase::class.java,
+                "product_db").build()
+
+            db.productDao().insertAll(ProductFromDatabase(null, "Blue Socks", 0.99))
+
+            val data = db.productDao().getAll().toString()
+            uiThread {
+                Log.d("iggy", data)
+            }
+        }
 
         supportFragmentManager.beginTransaction().replace(R.id.frame_layout, FragmentMain()).commit()
 

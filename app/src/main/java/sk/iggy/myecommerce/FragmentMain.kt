@@ -27,10 +27,10 @@ class FragmentMain : Fragment() {
                 root.recycler_view.apply {
                     layoutManager = GridLayoutManager(activity, 2)
                     adapter = ProductsAdapter(products)
-                    root.progressBar.visibility = View.GONE
                 }
             }
         }
+        root.progressBar.visibility = View.GONE
 
         val categories = listOf("shirts", "trousers", "underwears", "Iggy", "Noro", "Roxor", "Luko")
 
